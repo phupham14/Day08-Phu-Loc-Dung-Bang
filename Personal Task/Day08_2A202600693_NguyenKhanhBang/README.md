@@ -527,10 +527,10 @@ run_dashboard()
 
 | Thành viên | MSSV | Nhiệm vụ | Trạng thái |
 |-----------|------|----------|------------|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|Phạm Trần Nguyên Phú | |Data & Retrieval pipeline	src/retrieval.py — load docs, vector store, search | Hoàn thành |
+|Nguyễn Tuấn Dũng | |Conversation Memory + Evaluation	src/memory.py + hoàn thiện evaluation/golden_dataset.json (cần thêm 12 cặp) + eval_pipeline.py | ? |
+|Mã Vĩnh Lộc |2A202600975| Generation + Citation	src/generation.py — LLM call, trả lời có citation| Hoàn thành |
+|Nguyễn Khánh Bằng |2A202600693| UI + Integration	app.py (Streamlit/Chainlit), hiển thị sources, ghép pipeline | Hoàn thành |
 
 ---
 
