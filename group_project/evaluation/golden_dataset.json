@@ -1,17 +1,77 @@
 [
   {
-    "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
-    "expected_answer": "Phạt tù từ 1 đến 5 năm đối với trường hợp tàng trữ từ 1g đến dưới 5g heroin hoặc cocaine, hoặc chất ma tuý khác với khối lượng tương đương.",
-    "expected_context": "Bộ luật Hình sự 2015, Điều 249"
+    "question": "Luật Phòng, chống ma túy 120/2025/QH15 điều chỉnh những nội dung nào?",
+    "expected_answer": "Luật quy định về phòng, chống ma túy; quản lý người sử dụng trái phép chất ma túy; cai nghiện ma túy; trách nhiệm của cá nhân, gia đình, cơ quan, tổ chức; quản lý nhà nước và hợp tác quốc tế về phòng, chống ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 1"
   },
   {
-    "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
-    "expected_answer": "Cai nghiện tự nguyện tại gia đình, cai nghiện tự nguyện tại cộng đồng, cai nghiện tự nguyện tại cơ sở cai nghiện, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
-    "expected_context": "Luật Phòng chống ma tuý 2021, Chương V"
+    "question": "Theo Luật 120/2025/QH15, chất ma túy được hiểu là gì?",
+    "expected_answer": "Chất ma túy là chất gây nghiện, chất hướng thần được quy định trong danh mục chất ma túy do Chính phủ ban hành.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 2 khoản 1"
   },
   {
-    "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
-    "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
-    "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+    "question": "Người sử dụng trái phép chất ma túy là ai?",
+    "expected_answer": "Người sử dụng trái phép chất ma túy là người có hành vi sử dụng chất ma túy không được người hoặc cơ quan chuyên môn có thẩm quyền cho phép và có kết quả xét nghiệm chất ma túy trong cơ thể dương tính.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 2 khoản 9"
+  },
+  {
+    "question": "Cai nghiện ma túy được định nghĩa như thế nào trong Luật 120/2025/QH15?",
+    "expected_answer": "Cai nghiện ma túy là quá trình hỗ trợ về y tế, tâm lý, xã hội nhằm giúp người nghiện dừng sử dụng chất ma túy, thuốc gây nghiện, thuốc hướng thần; phục hồi thể chất, tinh thần, nâng cao nhận thức và thay đổi hành vi.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 2 khoản 12"
+  },
+  {
+    "question": "Nhà nước có chính sách gì về quản lý người sử dụng trái phép chất ma túy và người nghiện ma túy?",
+    "expected_answer": "Nhà nước quản lý chặt chẽ người sử dụng trái phép chất ma túy, người nghiện ma túy; khuyến khích cai nghiện tự nguyện, điều trị nghiện bằng thuốc thay thế và khuyến khích tổ chức, cá nhân hỗ trợ cai nghiện, quản lý sau cai.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 3 khoản 5"
+  },
+  {
+    "question": "Nguồn tài chính cho phòng, chống ma túy gồm những nguồn nào?",
+    "expected_answer": "Nguồn tài chính gồm ngân sách nhà nước; nguồn tài trợ, viện trợ, đầu tư, tặng cho của tổ chức, cá nhân trong nước và nước ngoài; chi trả của người nghiện ma túy, gia đình họ; và các nguồn tài chính hợp pháp khác.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 4"
+  },
+  {
+    "question": "Luật 120/2025/QH15 nghiêm cấm các hành vi nào liên quan đến trồng cây có chứa chất ma túy?",
+    "expected_answer": "Luật nghiêm cấm trồng cây có chứa chất ma túy và hướng dẫn trồng cây có chứa chất ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 5 khoản 1"
+  },
+  {
+    "question": "Việc sử dụng, tổ chức sử dụng trái phép chất ma túy có bị nghiêm cấm không?",
+    "expected_answer": "Có. Luật nghiêm cấm sử dụng, tổ chức sử dụng trái phép chất ma túy; cưỡng bức, lôi kéo người khác sử dụng trái phép chất ma túy; chứa chấp hoặc hỗ trợ việc sử dụng trái phép chất ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 5 khoản 5"
+  },
+  {
+    "question": "Trách nhiệm của cá nhân, gia đình và cộng đồng trong phòng, chống ma túy là gì?",
+    "expected_answer": "Cá nhân, gia đình và cộng đồng có trách nhiệm tuyên truyền, giáo dục người thân về tác hại của ma túy; thực hiện quy định pháp luật; hợp tác với cơ quan chức năng; quản lý người sử dụng trái phép chất ma túy; hỗ trợ cai nghiện và cung cấp thông tin về tội phạm, tệ nạn ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 6"
+  },
+  {
+    "question": "Cơ sở giáo dục có trách nhiệm gì trong phòng, chống ma túy?",
+    "expected_answer": "Cơ sở giáo dục phải tổ chức chương trình giáo dục, phổ biến pháp luật về phòng, chống ma túy cho học sinh, sinh viên, học viên; quản lý, ngăn chặn vi phạm; phối hợp với gia đình, địa phương và tổ chức xét nghiệm khi cần thiết.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 8"
+  },
+  {
+    "question": "Cơ quan chuyên trách phòng, chống tội phạm về ma túy gồm những cơ quan nào?",
+    "expected_answer": "Cơ quan chuyên trách gồm lực lượng thuộc Công an nhân dân và lực lượng thuộc Bộ đội Biên phòng, Cảnh sát biển Việt Nam, Hải quan Việt Nam.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 11 khoản 1"
+  },
+  {
+    "question": "Biện pháp giám sát điện tử được áp dụng để quản lý những đối tượng nào?",
+    "expected_answer": "Giám sát điện tử được dùng để quản lý, giám sát người đang cai nghiện ma túy tự nguyện tại gia đình, cộng đồng; người đang điều trị nghiện bằng thuốc thay thế; và người đang bị quản lý sau cai nghiện ma túy.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 12 khoản 1"
+  },
+  {
+    "question": "Hoạt động hợp pháp liên quan đến ma túy gồm những nhóm hoạt động nào?",
+    "expected_answer": "Hoạt động hợp pháp liên quan đến ma túy gồm nghiên cứu, giám định, kiểm nghiệm, kiểm định, sản xuất; vận chuyển, bảo quản, tồn trữ, mua bán, phân phối, sử dụng, xử lý, trao đổi; và nhập khẩu, xuất khẩu, tạm nhập, tái xuất, tạm xuất, tái nhập, quá cảnh các chất, tiền chất, thuốc và nguyên liệu liên quan theo quy định.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 13"
+  },
+  {
+    "question": "Nội dung quản lý nhà nước về phòng, chống ma túy bao gồm gì?",
+    "expected_answer": "Nội dung quản lý nhà nước gồm ban hành văn bản pháp luật; hướng dẫn áp dụng pháp luật; đình chỉ hoặc bãi bỏ quy định trái luật; phân bổ kinh phí; xây dựng cơ sở dữ liệu; thống kê, báo cáo; thanh tra, khen thưởng, xử lý vi phạm; quản lý tổ chức, nhân lực, đào tạo; tổng kết, nghiên cứu khoa học và hợp tác quốc tế.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 49"
+  },
+  {
+    "question": "Luật Phòng, chống ma túy 120/2025/QH15 có hiệu lực từ ngày nào?",
+    "expected_answer": "Luật Phòng, chống ma túy 120/2025/QH15 có hiệu lực thi hành từ ngày 01 tháng 7 năm 2026.",
+    "expected_context": "Luật Phòng, chống ma túy 120/2025/QH15, Điều 55 khoản 1"
   }
 ]
