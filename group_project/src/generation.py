@@ -5,7 +5,7 @@ Person 2: Mã Vĩnh Lộc
 Responsibility: LLM call + answer với citation.
 
 Dependencies from teammates:
-  - Person 1 (retrieval.py): retrieve(query, top_k) → list[dict]
+  - Person 1 (retrieval.py): search(query, top_k) → list[dict]
   - Person 3 (memory.py):    history: list[dict] (injected, not managed here)
   - Person 4 (app.py):       calls generate() / generate_stream()
 
@@ -340,28 +340,29 @@ def generate_stream(
 
 
 # =============================================================================
-# DEMO
+# DEMO — chạy trực tiếp: python -m group_project.src.generation
 # =============================================================================
 
 if __name__ == "__main__":
     import sys
     import pathlib
 
-    sys.path.insert(0, str(pathlib.Path(__file__).parent.parent / "src"))
+    # Thêm group_project/src vào path để import retrieval
+    sys.path.insert(0, str(pathlib.Path(__file__).parent))
 
-    try:
-        from task9_retrieval_pipeline import retrieve as _retrieve
-        def retrieve_fn(q: str, k: int = TOP_K) -> list[dict]:
-            return _retrieve(q, top_k=k)
-    except ImportError:
-        print("Retrieval pipeline not found — demo with empty chunks.")
-        def retrieve_fn(q: str, k: int = TOP_K) -> list[dict]:
-            return []
+    from retrieval import search, build_vector_db
+
+    # Build DB nếu chưa có
+    print("Kiểm tra / build vector DB...")
+    build_vector_db()
+
+    def retrieve_fn(q: str, k: int = TOP_K) -> list[dict]:
+        return search(q, top_k=k)
 
     test_queries = [
         "Hình phạt cho tội tàng trữ trái phép chất ma tuý?",
-        "Những nghệ sĩ nào bị bắt vì liên quan tới ma tuý?",
         "Quy trình cai nghiện bắt buộc là gì?",
+        "Danh mục chất ma tuý nhóm I gồm những gì?",
     ]
 
     history: list[dict] = []
@@ -369,11 +370,11 @@ if __name__ == "__main__":
     for q in test_queries:
         print(f"\n{'='*70}\nQ: {q}\n{'='*70}")
         chunks = retrieve_fn(q)
+        print(f"[Retrieval] Lấy được {len(chunks)} chunks")
         result = generate(q, chunks, history=history)
         print(f"A: {result.answer}")
         print(f"\n[Sources: {result.unique_sources} | via {result.retrieval_source}]")
 
-        # Simulate memory.py updating history after each turn
         history.append({"role": "user", "content": q})
         history.append({"role": "assistant", "content": result.answer})
-        history = history[-12:]  # keep last 6 turns (memory.py quản lý phần này)
+        history = history[-12:]  # keep last 6 turns
