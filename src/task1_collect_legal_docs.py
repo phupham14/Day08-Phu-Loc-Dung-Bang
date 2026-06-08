@@ -42,6 +42,5 @@ def setup_directory():
 #     filepath.write_bytes(response.content)
 #     print(f"✓ Đã tải: {filepath}")
 
-
 if __name__ == "__main__":
     setup_directory()

@@ -86,7 +86,23 @@ def retrieve(
     #     return fallback
     #
     # return final_results[:top_k]
-    raise NotImplementedError("Implement retrieve")
+    dense_results = semantic_search(query, top_k=top_k * 2)
+    sparse_results = lexical_search(query, top_k=top_k * 2)
+    merged = rerank_rrf([dense_results, sparse_results], top_k=top_k * 2)
+    for item in merged:
+        item["source"] = "hybrid"
+    if use_reranking and merged:
+        final_results = rerank(query, merged, top_k=top_k, method=RERANK_METHOD)
+    else:
+        final_results = merged[:top_k]
+    if not final_results or final_results[0]["score"] < score_threshold:
+        print(
+            f"  ⚠ Hybrid score ({(final_results[0]['score'] if final_results else 0):.3f}) "
+            f"< threshold ({score_threshold}). Fallback → PageIndex"
+        )
+        fallback = pageindex_search(query, top_k=top_k)
+        return fallback
+    return final_results[:top_k]
 
 
 if __name__ == "__main__":

@@ -73,7 +73,22 @@ def lexical_search(query: str, top_k: int = 10) -> list[dict]:
     #             "metadata": CORPUS[idx]["metadata"]
     #         })
     # return results
-    raise NotImplementedError("Implement lexical_search")
+    tokenized_query = query.lower().split()
+    scores = [0.0] * len(CORPUS)  # Placeholder for BM25 scores
+
+    # get top_k indices
+    import numpy as np  
+    top_indices = np.argsort(scores)[::-1][:top_k]
+
+    results = []
+    for idx in top_indices:
+        if scores[idx] > 0:
+            results.append({
+                "content": CORPUS[idx]["content"],
+                "score": float(scores[idx]),
+                "metadata": CORPUS[idx]["metadata"]
+            })
+    return results
 
 
 if __name__ == "__main__":
